@@ -1,0 +1,302 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: 'Kaisei HarunoUmi', serif;
+  background-color: #bdbdbd1f;
+}
+
+.logo {
+  color: #e8a540;
+}
+
+.nav-item a {
+  color: #e8a540;
+}
+
+.banner .content h1, .banner .content h2 {
+  color: #e8a540;
+}
+
+.banner button {
+  color: #fff;
+}
+
+.about-title,
+.skills-title,
+.projects-title {
+  color: #d0871a;
+}
+
+.about-title::after,
+.skills-title::after,
+.projects-title::after {
+  background-color: #e8a540;
+}
+
+.skill-list span {
+  color: #e8a540;
+}
+
+header, .banner, section {
+  min-width: 1200px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+section {
+  padding: 50px 0 0;
+}
+
+header .container {
+  background-color: #000;
+  height: 50px;
+  padding: 0 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .logo {
+  font-size: 28px;
+  font-weight: bold;
+  font-family: 'Julius Sans One', sans-serif;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+header nav .nav-items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  list-style-type: none;
+}
+
+header nav .nav-items .nav-item a {
+  text-decoration: none;
+  display: block;
+  padding: 10px 15px;
+  font-size: 18px;
+}
+
+header nav .nav-items .nav-item a:hover {
+  text-decoration: underline;
+}
+
+.banner .container {
+  background-image: url("/img/emile-perron-xrVDYZRGdw4-unsplash.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 90vh;
+  position: relative;
+}
+
+.banner .container .content {
+  position: absolute;
+  top: 40%;
+  left: 3%;
+  width: 70%;
+}
+
+.banner .container .content h1 {
+  font-size: 60px;
+}
+
+.banner .container .content h2 {
+  font-size: 40px;
+}
+
+.banner .container button {
+  background-color: transparent;
+  border: none;
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  font-size: 30px;
+  cursor: pointer;
+  -webkit-transition: font-size .5s;
+  transition: font-size .5s;
+}
+
+.banner .container button:hover {
+  font-size: 35px;
+}
+
+.about .about-title {
+  text-align: center;
+  position: relative;
+  margin-bottom: 50px;
+  font-size: 24px;
+}
+
+.about .about-title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 130px;
+  height: 1px;
+}
+
+.about .box {
+  background-color: #e4e4e49e;
+  width: 800px;
+  margin: auto;
+  border-radius: 5px;
+  padding: 20px;
+  -webkit-box-shadow: 20px 10px 40px rgba(0, 0, 0, 0.5);
+          box-shadow: 20px 10px 40px rgba(0, 0, 0, 0.5);
+}
+
+.about .box .content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.about .box .content img {
+  display: block;
+  width: 200px;
+}
+
+.about .box .content .desc ul {
+  list-style-type: none;
+}
+
+.about .box .content .desc ul span {
+  font-weight: bold;
+}
+
+.about .box .content .desc > span {
+  display: block;
+  width: 520px;
+  padding-top: 20px;
+}
+
+.skills .skills-title {
+  text-align: center;
+  position: relative;
+  margin-bottom: 50px;
+  font-size: 24px;
+}
+
+.skills .skills-title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 130px;
+  height: 1px;
+}
+
+.skills .skill-lists {
+  list-style-type: none;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  grid-gap: 70px 0;
+  justify-items: center;
+  margin: 0 70px;
+}
+
+.skills .skill-lists .skill-list {
+  width: 100px;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.skills .skill-lists .skill-list img {
+  display: block;
+  width: 100%;
+  margin-bottom: 20px;
+  -webkit-transition: -webkit-transform .5s;
+  transition: -webkit-transform .5s;
+  transition: transform .5s;
+  transition: transform .5s, -webkit-transform .5s;
+  cursor: pointer;
+}
+
+.skills .skill-lists .skill-list img:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.skills .skill-lists .skill-list span {
+  font-size: 24px;
+  font-weight: bold;
+  text-shadow: 1px 1px 0px #000;
+}
+
+.projects .projects-title {
+  text-align: center;
+  position: relative;
+  margin-bottom: 50px;
+  font-size: 24px;
+}
+
+.projects .projects-title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 130px;
+  height: 1px;
+}
+
+.projects .project-lists {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  list-style-type: none;
+}
+
+.projects .project-lists .project-list {
+  width: 300px;
+  height: 200px;
+  background-color: #e8a540;
+}
+/*# sourceMappingURL=index.css.map */

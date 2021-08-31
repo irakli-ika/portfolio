@@ -1,0 +1,287 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+// variables
+$black: #000;
+$orange: #e8a540;
+$sec-orange: #d0871a;
+$primary: #fff;
+
+// body
+body {
+    font-family: 'Kaisei HarunoUmi', serif;
+    background-color: #bdbdbd1f;
+}
+// colors
+.logo {
+    color: $orange;
+}
+.nav-item {
+    a {
+        color: $orange;
+    }
+}
+.banner {
+    .content {
+        h1, h2 {
+            color: $orange;
+        }
+    }
+    button {
+        color: $primary;
+    }
+}
+.about-title,
+.skills-title,
+.projects-title {
+    color: $sec-orange;
+
+    &::after {
+        background-color: $orange;
+    }
+}
+.skill-list {
+    span {
+        color: $orange;
+    }
+}
+
+// no responsive
+header, .banner, section {
+    min-width: 1200px;
+}
+
+
+// container
+.container {
+    max-width: 1200px;
+    margin: auto;
+}
+section {
+    padding: 50px 0 0;
+}
+
+// start header
+header {
+    .container {
+        background-color: $black;
+        height: 50px;
+        padding: 0 50px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .logo {
+        font-size: 28px;
+        font-weight: bold;
+        font-family: 'Julius Sans One', sans-serif;
+        user-select: none;
+    }
+    nav {
+        .nav-items {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            list-style-type: none;
+
+            .nav-item {
+                a {
+                    text-decoration: none;
+                    display: block;
+                    padding: 10px 15px;
+                    font-size: 18px;
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+}
+// start banner
+.banner {
+    .container {
+        background-image: url('/img/emile-perron-xrVDYZRGdw4-unsplash.jpg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 90vh;
+        position: relative;
+        
+        .content {
+            position: absolute;
+            top: 40%;
+            left: 3%;
+            width: 70%;
+
+            h1 {
+                font-size: 60px;
+            }
+            
+            h2 {
+                font-size: 40px;
+            }
+        }
+
+        button {
+            background-color: transparent;
+            border: none;
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 30px;
+            cursor: pointer;
+            transition: font-size .5s;
+
+            &:hover {
+                font-size: 35px;
+            }
+        }
+    }
+}
+// start about
+.about {
+
+    .about-title {
+        text-align: center;
+        position: relative;
+        margin-bottom: 50px;
+        font-size: 24px;
+
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 130px;
+            height: 1px;
+        }
+
+    }
+    .box {
+        background-color: #e4e4e49e;
+        width: 800px;
+        margin: auto;
+        border-radius: 5px;
+        padding: 20px;
+        box-shadow: 20px 10px 40px rgba(0, 0, 0, 0.5);
+
+        .content {
+            display: flex;
+            justify-content: space-between;
+
+            img {
+                display: block;
+                width: 200px;
+            }
+
+            .desc {
+                
+                ul {
+                    list-style-type: none;
+
+                    span {
+                        font-weight: bold;
+                    }
+                }
+                > span {
+                    display: block;
+                    width: 520px;
+                    padding-top: 20px;
+                }
+            }
+        }
+    }
+}
+// start skills
+.skills {
+    
+    .skills-title {
+        text-align: center;
+        position: relative;
+        margin-bottom: 50px;
+        font-size: 24px;
+
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 130px;
+            height: 1px;
+        }
+
+    }
+    .skill-lists {
+        list-style-type: none;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 70px 0;
+        justify-items: center;
+        margin: 0 70px;
+
+        .skill-list {
+            width: 100px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            img {
+                display: block;
+                width: 100%;
+                margin-bottom: 20px;
+                transition: transform .5s;
+                cursor: pointer;
+
+                &:hover {
+                    transform: scale(1.1);
+                }
+            }
+            span {
+                font-size: 24px;
+                font-weight: bold;
+                text-shadow: 1px 1px 0px $black;
+            }
+        }
+    }
+}
+// start projects
+.projects {
+
+    .projects-title {
+        text-align: center;
+        position: relative;
+        margin-bottom: 50px;
+        font-size: 24px;
+
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 130px;
+            height: 1px;
+        }
+
+    }
+    .project-lists {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        list-style-type: none;
+        
+        .project-list {
+            width: 300px;
+            height: 200px;
+            background-color: #e8a540;
+        }
+    }
+}

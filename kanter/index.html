@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="style/index.css">
+    <title>kanter</title>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <!-- start logo -->
+            <div class="logo">
+                <a href="#">
+                   <img src="img/logo-white.png" id="logo-white" alt="logo">
+                   <img src="img/logo-black.png" id="logo-black" alt="logo">
+                </a>
+            </div>
+            <!-- start navbar -->
+            <nav>
+                <ul class="nav-items">
+                    <li class="nav-item">
+                        <span>home <ion-icon name="chevron-down-outline"></ion-icon></span>
+                        <ul class="modal-lists">
+                            <li class="modal-list"><a href="">home - default</a></li>
+                            <li class="modal-list"><a href="">home - slide content</a></li>
+                            <li class="modal-list"><a href="">home - default</a></li>
+                            <li class="modal-list"><a href="">home - default</a></li>
+                            <li class="modal-list"><a href="">home - default</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item" >
+                        <span>pages <ion-icon name="chevron-down-outline"></ion-icon></span>
+                        <ul class="modal-lists">
+                            <li class="modal-list"><a href="">about us</a></li>
+                            <li class="modal-list"><a href="">404 page</a></li>
+                            <li class="modal-list"><a href="">terms</a></li>
+                            <li class="modal-list"><a href="">faq page</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item" >
+                        <span>portfolio <ion-icon name="chevron-down-outline"></ion-icon></span>
+                        <ul class="modal-lists">
+                            <li class="modal-list"><a href="">page - default</a></li>
+                            <li class="modal-list"><a href="">page no filter</a></li>
+                            <li class="modal-list"><a href="">page no filter</a></li>
+                            <li class="modal-list"><a href="">page no filter</a></li>
+                            <li class="modal-list"><a href="">page no filter</a></li>
+                            <li class="modal-list"><a href="">page no filter</a></li>
+                            <li class="modal-list"><a href="">page no filter</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item" >
+                        <span>services <ion-icon name="chevron-down-outline"></ion-icon></span>
+                        <ul class="modal-lists">
+                            <li class="modal-list"><a href="">services page</a></li>
+                            <li class="modal-list"><a href="">services mini head</a></li>
+                            <li class="modal-list"><a href="">services page dark</a></li>
+                            <li class="modal-list"><a href="">services page</a></li>
+                            <li class="modal-list"><a href="">services mini head</a></li>
+                            <li class="modal-list"><a href="">services page dark</a></li>
+                            <li class="modal-list"><a href="">services page</a></li>
+                            <li class="modal-list"><a href="">services mini head</a></li>
+                            <li class="modal-list"><a href="">services page dark</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item" >
+                        <span>blog <ion-icon name="chevron-down-outline"></ion-icon></span>
+                        <ul class="modal-lists">
+                            <li class="modal-list"><a href="">blog page</a></li>
+                            <li class="modal-list"><a href="">blog mini head</a></li>
+                            <li class="modal-list"><a href="">blog page dark</a></li>
+                            <li class="modal-list"><a href="">blog page</a></li>
+                            <li class="modal-list"><a href="">blog mini head</a></li>
+                            <li class="modal-list"><a href="">blog page dark</a></li>
+                            <li class="modal-list"><a href="">blog page</a></li>
+                            <li class="modal-list"><a href="">blog mini head</a></li>
+                            <li class="modal-list"><a href="">blog page dark</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item" >
+                        <span>prices <ion-icon name="chevron-down-outline"></ion-icon></span>
+                        <ul class="modal-lists">
+                            <li class="modal-list"><a href="">prices page</a></li>
+                            <li class="modal-list"><a href="">prices mini head</a></li>
+                            <li class="modal-list"><a href="">prices page dark</a></li>
+                            <li class="modal-list"><a href="">prices page</a></li>
+                            <li class="modal-list"><a href="">prices mini head</a></li>
+                            <li class="modal-list"><a href="">prices page dark</a></li>
+                            <li class="modal-list"><a href="">prices page</a></li>
+                            <li class="modal-list"><a href="">prices mini head</a></li>
+                            <li class="modal-list"><a href="">prices page dark</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item" >
+                        <span>contact <ion-icon name="chevron-down-outline"></ion-icon></span>
+                        <ul class="modal-lists">
+                            <li class="modal-list"><a href="">contact - 0</a></li>
+                            <li class="modal-list"><a href="">contact - 1</a></li>
+                            <li class="modal-list"><a href="">contact - 2</a></li>
+                            <li class="modal-list"><a href="">contact - 3</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <div class="hamburger" >
+                    <i class="fas fa-bars" id="mobile-Open"></i>
+                    <i class="fas fa-times" id="mobile-Close"></i>
+                </div>
+                <div class="mobile-nav">
+                    <ul class="mobile__nav-items">
+                        <li class="mobile__nav-item" >
+                            <span>pages <ion-icon name="chevron-down-outline"></ion-icon></span>
+                            <ul class="mobile__modal-lists">
+                                <li class="mobile__modal-list"><a href="">about us</a></li>
+                                <li class="mobile__modal-list"><a href="">404 page</a></li>
+                                <li class="mobile__modal-list"><a href="">terms</a></li>
+                                <li class="mobile__modal-list"><a href="">faq page</a></li>
+                            </ul>
+                        </li>
+                        <li class="mobile__nav-item" >
+                            <span>portfolio <ion-icon name="chevron-down-outline"></ion-icon></span>
+                            <ul class="mobile__modal-lists">
+                                <li class="mobile__modal-list"><a href="">page - default</a></li>
+                                <li class="mobile__modal-list"><a href="">page no filter</a></li>
+                                <li class="mobile__modal-list"><a href="">page no filter</a></li>
+                                <li class="mobile__modal-list"><a href="">page no filter</a></li>
+                                <li class="mobile__modal-list"><a href="">page no filter</a></li>
+                                <li class="mobile__modal-list"><a href="">page no filter</a></li>
+                                <li class="mobile__modal-list"><a href="">page no filter</a></li>
+                            </ul>
+                        </li>
+                        <li class="mobile__nav-item" >
+                            <span>services <ion-icon name="chevron-down-outline"></ion-icon></span>
+                            <ul class="mobile__modal-lists">
+                                <li class="mobile__modal-list"><a href="">services page</a></li>
+                                <li class="mobile__modal-list"><a href="">services mini head</a></li>
+                                <li class="mobile__modal-list"><a href="">services page dark</a></li>
+                                <li class="mobile__modal-list"><a href="">services page</a></li>
+                                <li class="mobile__modal-list"><a href="">services mini head</a></li>
+                                <li class="mobile__modal-list"><a href="">services page dark</a></li>
+                                <li class="mobile__modal-list"><a href="">services page</a></li>
+                                <li class="mobile__modal-list"><a href="">services mini head</a></li>
+                                <li class="mobile__modal-list"><a href="">services page dark</a></li>
+                            </ul>
+                        </li>
+                        <li class="mobile__nav-item" >
+                            <span>blog <ion-icon name="chevron-down-outline"></ion-icon></span>
+                            <ul class="mobile__modal-lists">
+                                <li class="mobile__modal-list"><a href="">blog page</a></li>
+                                <li class="mobile__modal-list"><a href="">blog mini head</a></li>
+                                <li class="mobile__modal-list"><a href="">blog page dark</a></li>
+                                <li class="mobile__modal-list"><a href="">blog page</a></li>
+                                <li class="mobile__modal-list"><a href="">blog mini head</a></li>
+                                <li class="mobile__modal-list"><a href="">blog page dark</a></li>
+                                <li class="mobile__modal-list"><a href="">blog page</a></li>
+                                <li class="mobile__modal-list"><a href="">blog mini head</a></li>
+                                <li class="mobile__modal-list"><a href="">blog page dark</a></li>
+                            </ul>
+                        </li>
+                        <li class="mobile__nav-item" >
+                            <span>prices <ion-icon name="chevron-down-outline"></ion-icon></span>
+                            <ul class="mobile__modal-lists">
+                                <li class="mobile__modal-list"><a href="">prices page</a></li>
+                                <li class="mobile__modal-list"><a href="">prices mini head</a></li>
+                                <li class="mobile__modal-list"><a href="">prices page dark</a></li>
+                                <li class="mobile__modal-list"><a href="">prices page</a></li>
+                                <li class="mobile__modal-list"><a href="">prices mini head</a></li>
+                                <li class="mobile__modal-list"><a href="">prices page dark</a></li>
+                                <li class="mobile__modal-list"><a href="">prices page</a></li>
+                                <li class="mobile__modal-list"><a href="">prices mini head</a></li>
+                                <li class="mobile__modal-list"><a href="">prices page dark</a></li>
+                            </ul>
+                        </li>
+                        <li class="mobile__nav-item" >
+                            <span>contact <ion-icon name="chevron-down-outline"></ion-icon></span>
+                            <ul class="mobile__modal-lists">
+                                <li class="mobile__modal-list"><a href="">contact - 0</a></li>
+                                <li class="mobile__modal-list"><a href="">contact - 1</a></li>
+                                <li class="mobile__modal-list"><a href="">contact - 2</a></li>
+                                <li class="mobile__modal-list"><a href="">contact - 3</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <!-- start banner -->
+    <div class="banner">
+        <div class="banner-content">
+            <h2>WELCOME TO <span>KANTER</span></h2>
+            <span>We created beautiful design & great user experience, for your best projects.</span>
+            <a href="#watch-here" id="click-here">watch demos</a>
+        </div>
+    </div>
+    <!-- start cards -->
+    <div class="cards-container">
+        <ul class="cards">
+            <li class="card">
+                <ion-icon name="phone-portrait-outline"></ion-icon>
+                <h4>FULLY RESPONSIVE</h4>
+                <p>Kanter is fully responsive, you can view it also
+                    in the mobile/tablets devices and it looks very in more devices.</p>
+            </li>
+            <li class="card">
+                <ion-icon name="heart-outline"></ion-icon>
+                <h4>WITH LOVE</h4>
+                <p>Kanter developed with love and attention to detail,
+                    each block, and each button did not remain without attention</p>
+            </li>
+            <li class="card">
+                <ion-icon name="browsers-outline"></ion-icon>
+                <h4>ONE&MULTI PAGE</h4>
+                <p>Made for developers, agencies, photographers, corporations, web studios,
+                designers, bloggers and creative people.</p>
+            </li>
+            <li class="card">
+                <ion-icon name="desktop-outline"></ion-icon>
+                <h4>RETINA READY</h4>
+                <p>Kanter is retina ready, you can view
+                it in the large displays and it will be clear display on large displays.</p>
+            </li>
+        </ul>
+    </div>
+
+    <!-- start section -->
+    <section id="watch-here">
+        <div class="container">
+            <div class="section-header">
+                <h3 class="section-title">KANTER <span>DEMOS</span></h3>
+                <span>You can select your demo below</span>
+                <nav class="section-nav">
+                    <ul class="sec-nav__lists">
+                        <li class="sec-nav__list">
+                            <a href="" class="active">all</a></li>
+                        <li class="sec-nav__list">
+                            <a href="">home</a></li>
+                        <li class="sec-nav__list">
+                            <a href="">portfolio</a></li>
+                        <li class="sec-nav__list">
+                            <a href="">services</a></li>
+                        <li class="sec-nav__list">
+                            <a href="">blog</a></li>
+                        <li class="sec-nav__list">
+                            <a href="">price</a></li>
+                        <li class="sec-nav__list">
+                            <a href="">contact</a></li>
+                        <li class="sec-nav__list">
+                            <a href="">pages</a>
+                        </li>
+                    </ul>
+                    
+                    <ul class="sec-mobile-nav">
+                        <li class="sec-mobile-nav-btn">select <ion-icon name="chevron-down-outline"></ion-icon></li>
+                        <ul class="sec-mobile-nav-lists">
+                            <li class="sec-mobile-nav-list">
+                                <a href="" class="active">all</a></li>
+                            <li class="sec-mobile-nav-list">
+                                <a href="">home</a></li>
+                            <li class="sec-mobile-nav-list">
+                                <a href="">portfolio</a></li>
+                            <li class="sec-mobile-nav-list">
+                                <a href="">services</a></li>
+                            <li class="sec-mobile-nav-list">
+                                <a href="">blog</a></li>
+                            <li class="sec-mobile-nav-list">
+                                <a href="">price</a></li>
+                            <li class="sec-mobile-nav-list">
+                                <a href="">contact</a></li>
+                            <li class="sec-mobile-nav-list">
+                                <a href="">pages</a>
+                            </li>
+                        </ul>
+                    </ul>
+                </nav>
+            </div><!-- end section-header -->
+            <ul class="screen-items">
+                <li class="screen-item">
+                    <img src="./img/pr-1.png" alt="">
+                    <span class="screen-title"><span>01.</span> HOME DEFAULT</span>
+                </li>
+                <li class="screen-item">
+                    <img src="./img/pr-2.png" alt="">
+                    <span class="screen-title"><span>02.</span> HOME LEFT NAV</span>
+                </li>
+                <li class="screen-item">
+                    <img src="./img/pr-3.png" alt="">
+                    <span class="screen-title"><span>03.</span> HOME VIDEO BG</span>
+                </li>
+                <li class="screen-item">
+                    <img src="./img/pr-4.png" alt="">
+                    <span class="screen-title"><span>04.</span> HOME DEMO 1</span>
+                </li>
+                <li class="screen-item">
+                    <img src="./img/pr-1.png" alt="">
+                    <span class="screen-title"><span>05.</span> HOME PROJECT RIGHT</span>
+                </li>
+                <li class="screen-item">
+                    <img src="./img/pr-3.png" alt="">
+                    <span class="screen-title"><span>03.</span> HOME VIDEO BG</span>
+                </li>
+                <li class="screen-item">
+                    <img src="./img/pr-4.png" alt="">
+                    <span class="screen-title"><span>04.</span> HOME DEMO 1</span>
+                </li>
+                <li class="screen-item">
+                    <img src="./img/pr-1.png" alt="">
+                    <span class="screen-title"><span>05.</span> HOME PROJECT RIGHT</span>
+                </li>
+                <li class="screen-item">
+                    <img src="./img/pr-4.png" alt="">
+                    <span class="screen-title"><span>04.</span> HOME DEMO 1</span>
+                </li>
+                <li class="screen-item">
+                    <img src="./img/pr-1.png" alt="">
+                    <span class="screen-title"><span>05.</span> HOME PROJECT RIGHT</span>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <!-- start wrapper -->
+    <div class="wrapper">
+        <div class="wrapper-display">
+            <h2>LIKE OUR CREATIVE DEMOS?</h2>
+            <a href="">buy kanter now!</a>
+        </div>
+    </div>
+    <!-- start footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-items">
+                <div class="footer-item">
+                    <div class="footer-logo">
+                        <img src="./img/logo-white.png" alt="">
+                    </div>
+                    <p class="footer-desc">
+                        We are a creative agency with a passion
+                        for design & developing beautiful creations.
+                    </p>
+                </div>
+                <div class="footer-item">
+                    <h3 class="footer-title">ADDITIONAL LINKS</h3>
+                    <ul class="footer-lists">
+                        <li class="footer-list"><ion-icon name="ellipsis-horizontal-circle-outline"></ion-icon>For Freelancer</li>
+                        <li class="footer-list"><ion-icon name="ellipsis-horizontal-circle-outline"></ion-icon>For Photographs</li>
+                        <li class="footer-list"><ion-icon name="ellipsis-horizontal-circle-outline"></ion-icon></ion-icon>Contact</li>
+                        <li class="footer-list"><ion-icon name="ellipsis-horizontal-circle-outline"></ion-icon></ion-icon>FAQ</li>
+                        <li class="footer-list"><ion-icon name="ellipsis-horizontal-circle-outline"></ion-icon></ion-icon>404 page</li>
+                    </ul>
+                </div>
+                <div class="footer-item">
+                    <h3 class="footer-title">PAGES</h3>
+                    <ul class="footer-lists">
+                        <li class="footer-list"><ion-icon name="ellipsis-horizontal-circle-outline"></ion-icon>About page</li>
+                        <li class="footer-list"><ion-icon name="ellipsis-horizontal-circle-outline"></ion-icon>Blog page</li>
+                        <li class="footer-list"><ion-icon name="ellipsis-horizontal-circle-outline"></ion-icon></ion-icon>Price page</li>
+                        <li class="footer-list"><ion-icon name="ellipsis-horizontal-circle-outline"></ion-icon></ion-icon>Portfolio page</li>
+                        <li class="footer-list"><ion-icon name="ellipsis-horizontal-circle-outline"></ion-icon></ion-icon>Portfolio single</li>
+                    </ul>
+                </div>
+                <div class="footer-item">
+                    <h3 class="footer-title">ADRESS</h3>
+                    <div class="footer-lists">
+                        <p>1234 SOME AVENUE,</p>
+                        <p>NEW YORK, NY 56789</p>
+                        <p>INFO@YOUWEBSITE.COM</p>
+                        <p>(123) 456-7890</p>
+                        <p>(123) 456-7890</p>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="./js/index.js"></script>
+</body>
+
+</html>
