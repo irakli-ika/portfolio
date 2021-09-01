@@ -28,13 +28,15 @@ body {
 
 .about-title,
 .skills-title,
-.projects-title {
+.projects-title,
+.contact-title {
   color: #d0871a;
 }
 
 .about-title::after,
 .skills-title::after,
-.projects-title::after {
+.projects-title::after,
+.contact-title::after {
   background-color: #e8a540;
 }
 
@@ -55,9 +57,22 @@ section {
   padding: 50px 0 0;
 }
 
+.bg {
+  position: -webkit-sticky;
+  position: sticky;
+  left: 0;
+  top: 0;
+  z-index: 999;
+  height: 40px;
+}
+
+header {
+  height: 50px;
+}
+
 header .container {
   background-color: #000;
-  height: 50px;
+  height: 100%;
   padding: 0 50px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -291,12 +306,120 @@ header nav .nav-items .nav-item a:hover {
   display: grid;
   -ms-grid-columns: (1fr)[3];
       grid-template-columns: repeat(3, 1fr);
+  grid-gap: 30px 0;
+  justify-items: center;
   list-style-type: none;
+  border-radius: 10px;
 }
 
 .projects .project-lists .project-list {
   width: 300px;
   height: 200px;
-  background-color: #e8a540;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 5px;
+  -webkit-transition: -webkit-transform .5s;
+  transition: -webkit-transform .5s;
+  transition: transform .5s;
+  transition: transform .5s, -webkit-transform .5s;
+}
+
+.projects .project-lists .project-list:hover {
+  -webkit-transform: scale(1.08);
+          transform: scale(1.08);
+}
+
+.projects .project-lists .project-list a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.projects .project-lists .proj_01 {
+  background-image: url("/img/proj/innomerce.PNG");
+}
+
+.projects .project-lists .proj_02 {
+  background-image: url("/img/proj/kanter.PNG");
+}
+
+.projects .project-lists .proj_03 {
+  background-image: url("/img/proj/auditors.PNG");
+}
+
+.projects .project-lists .proj_04 {
+  background-image: url("/img/proj/mepdc.png");
+}
+
+.contact .contact-title {
+  text-align: center;
+  position: relative;
+  margin-bottom: 50px;
+  font-size: 24px;
+}
+
+.contact .contact-title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 130px;
+  height: 1px;
+}
+
+.contact .contact-lists {
+  list-style-type: none;
+  text-align: center;
+  padding: 35px 20px;
+  margin: 0 auto 100px;
+  width: 600px;
+  border: 1px solid lightgray;
+  background-color: #e4e4e49e;
+}
+
+.contact .contact-lists i {
+  padding-right: 5px;
+}
+
+.contact .contact-lists .social-networks {
+  list-style-type: none;
+  margin-top: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.contact .contact-lists .social-networks li {
+  padding: 0 5px;
+}
+
+.contact .contact-lists .social-networks li i {
+  font-size: 30px;
+}
+
+.contact .contact-lists .social-networks li a {
+  color: #000;
+}
+
+.contact .contact-lists .social-networks li .github:hover {
+  color: #00000060;
+}
+
+.contact .contact-lists .social-networks li .fb:hover {
+  color: #0674e7;
+}
+
+.contact .contact-lists .social-networks li .in:hover {
+  color: #0077b5;
 }
 /*# sourceMappingURL=index.css.map */

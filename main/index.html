@@ -19,15 +19,16 @@
             <span class="logo">Irakli Qiria</span>
             <nav>
                 <ul class="nav-items">
-                    <li class="nav-item"><a href="#">Home</a></li>
-                    <li class="nav-item"><a href="#">About us</a></li>
-                    <li class="nav-item"><a href="#">Skills</a></li>
-                    <li class="nav-item"><a href="#">Contact</a></li>
+                    <li class="nav-item"><a href="#banner">Home</a></li>
+                    <li class="nav-item"><a href="#about">About us</a></li>
+                    <li class="nav-item"><a href="#skills">Skills</a></li>
+                    <li class="nav-item"><a href="#projects">Projects</a></li>
+                    <li class="nav-item"><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
         </div>
     </header>
-    <div class="banner">
+    <div class="banner" id="banner">
         <div class="container">
             <div class="content">
                 <h1>Hello, i'm Irakli Qiria.</h1>
@@ -38,7 +39,7 @@
             </button>
         </div>
     </div>
-    <section class="about">
+    <section class="about" id="about">
         <div class="container">
             <h3 class="about-title">About us</h3>
             <div class="box">
@@ -60,7 +61,7 @@
             </div>
         </div>
     </section>
-    <section class="skills">
+    <section class="skills" id="skills">
         <div class="container">
             <h3 class="skills-title">Skills</h3>
             <ul class="skill-lists">
@@ -88,19 +89,48 @@
                     <img src="/img/vue-min.png" alt="">
                     <span>Vue 3</span>
                 </li>
+                <li class="skill-list">
+                    <img src="/img/jquery-7-1175152.png" alt="">
+                    <span>jQuery</span>
+                </li>
+                <li class="skill-list">
+                    <img src="/img/logo firebase icon.png" alt="">
+                    <span>Firebase</span>
+                </li>
             </ul>
         </div>
     </section>
-    <section class="projects">
+    <section class="projects" id="projects">
         <div class="container">
             <h3 class="projects-title">Projects</h3>
             <ul class="project-lists">
-                <li class="project-list">my-proj</li>
-                <li class="project-list">my-proj</li>
-                <li class="project-list">my-proj</li>
+                <li class="project-list proj_01"><a href="https://irakli-ika.github.io/portfolio/innomerce/" target="_blank"></a></li>
+                <li class="project-list proj_02"><a href="https://irakli-ika.github.io/portfolio/kanter/" target="_blank"></a></li>
+                <li class="project-list proj_03"><a href="https://auditors.ge" target="_blank"></a></li>
+                <li class="project-list proj_04"><a href="https://mepdc.ge" target="_blank"></a></li>
             </ul>
         </div>
     </section>
-    
+    <section class="contact" id="contact">
+        <div class="container">
+            <h3 class="contact-title">Contact</h3>
+            <ul class="contact-lists">
+                <li class="contact-list"><i class="far fa-envelope"></i> irakliqiria8@gmail.com</li>
+                <li class="contact-list"><i class="fas fa-phone-alt"></i> 558 82 11 82</li>
+                <li class="contact-list"><i class="fas fa-map-marker-alt"></i> Tbilisi, khizabavris 11G, Georgia</li>
+                
+                <ul class="social-networks">
+                    <li><a href="https://github.com/irakli-ika" target="_blank" class="github"><i class="fab fa-github"></i></a></li>
+                    <li><a href="https://www.facebook.com/iikakoo.qiria" target="_blank" class="fb"><i class="fab fa-facebook"></i></a></li>
+                    <li><a href="https://www.linkedin.com/in/irakli-qiria-8314ab166" target="_blank" class="in"><i class="fab fa-linkedin"></i></a></li>
+                </ul>
+            </ul>
+            
+        </div>
+    </section>
+
+    <!-- import scripts -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+    <script src="index.js"></script>
 </body>
 </html>

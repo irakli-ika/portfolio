@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+        <link rel="stylesheet" href="style/style.css">
+        <title>rock-paper-scissors</title>
+    </head>
+    <body class="bg-secondary">
+        <header class="bg-light">
+            <h1>rock-paper-scissors</h1>
+        </header>
+        <section>
+            <div class="icons">
+                <div class="icons_container">
+                    <div class="row">
+                        <div class="col icons_container_col" id="rock"><img src="img/rock.png" class="efect" alt="rock"></div>
+                        <div class="col icons_container_col" id="paper"><img src="img/paper.png" class="efect" alt="paper"></div>
+                        <div class="col icons_container_col" id="scissors"><img src="img/scissors.png" class="efect" alt="scissors"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="score">
+                <div class="score_container">
+                    <div class="score_box">
+                        <div class="row justify-content-around main_score">
+                            <div class="user">USER</div>
+                            <div class="score_num"><p id="user_score">0</p> : <p id="computer_score">0</p></div>
+                            <div class="computer">COMPUTER</div>
+                        </div>
+                        <div class="score_icons flex-column">
+                            <!-- <div class="score_icons_content row">
+                                <div class="col choises">
+                                    <img src="img/rock.png" class="score_icon" alt="rock">
+                                </div>
+                                <div class="col choises">
+                                    <img src="img/scissors.png" class="score_icon" alt="rock">
+                                </div>
+                            </div> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        
+
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" ></script>
+        <script src="js/app.js"></script>
+    </body>
+</html>

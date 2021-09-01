@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <link rel="stylesheet" href="style/main.css">
+        <title>Movies</title>
+    </head>
+    <body>
+        <div class="search_box container mt-4">
+            <input class="form-control col-md-5 mx-auto" id="input" type="text" placeholder="Search">
+        </div>
+        <div class="wrapper mt-5">
+            <div class="container">
+                <div class="modal_content">
+                    <!-- TODO:: plase for dynamic modal element-->
+                </div>
+                <div class="row justify-content-around" id="main_row" >
+                    <!-- TODO:: place for dynamic elements from JavaScript -->
+                </div><!--? end row -->
+            </div><!--? end container -->
+        </div><!--? end wrapper -->
+        <!--? start pagination elements -->
+        <div class="wrapper_pagination">
+            <div class="container pagination_container mt-4 mx-auto">
+                <nav aria-label="Page navigation example ">
+                    <ul class="pagination justify-content-center">
+                      <!-- <li class="page-item"><a class="page-link" href="#">1</a></li>
+                      <li class="page-item"><a class="page-link" href="#">2</a></li>
+                      <li class="page-item"><a class="page-link" href="#">3</a></li>
+                      <li class="page-item"><a class="page-link" href="#">4</a></li> -->
+                    </ul>
+                </nav>
+            </div>
+        </div><!--? end pagination elements -->
+
+
+
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <script src="js/sql.js"></script>
+        <script src="js/modal.js"></script>
+        <script src="js/liveSearch.js"></script>
+        <script>
+            const cols = []
+            const modal = []
+
+            // ---- start pagination variables ----
+            const pagination_element = document.querySelector('.pagination')
+            const view = document.getElementById('main_row')
+            // ---- end pagination variables ----
+
+            let current_page = 1
+            const rows = 3
+
+            // --- start display function ---- 
+            // ---- filter function 
+            function display(items, view, row_per_page, page) {
+                view.innerHTML = ""
+                page--
+
+                const start = row_per_page * page
+                const end = start + row_per_page
+                const sliceItems = items.slice(start, end)
+                
+                sliceItems.forEach(element => {
+
+                    // cols.push(`<div class="main_col_click"
+                    //             <div class="main_col col-md-3 bg-secondary m-2 pt-2 rounded-lg">
+                    //                 <div class="content text-center">
+                    //                     <a href="page.html#${element.id}" class="text-decoration-none">
+                    //                         <div class="movie_name">
+                    //                             <h5 class="item">${element.name}</h5>
+                    //                         </div>
+                    //                         <div class="movie_img">
+                    //                             <img src="img/${element.image}" alt="">
+                    //                         </div>
+                    //                         <div class="more text-right">
+                    //                             <p>სრულად</p>
+                    //                         </div>
+                    //                     </a>
+                    //                 </div>
+                    //             </div>`)
+                                
+                    // ----- start main_col structure ----
+
+                    const main_col = document.createElement('div')
+                    main_col.classList.add('main_col', 'col-md-3', 'bg-secondary', 'm-2', 'pt-2', 'rounded-lg')
+
+                    const content = document.createElement('div')
+                    content.classList.add('content', 'text-center')
+                    
+                    main_col.appendChild (content)
+
+                    const aHref = document.createElement('a')
+                    const href = document.createAttribute('href')
+                    href.value = `#${element.name}`
+                    
+                    aHref.setAttributeNode(href)
+                    aHref.classList.add('text-decoration-none', 'open_modal')
+                    
+                    const a_id = document.createAttribute('id')
+                    a_id.value = `${element.id}`
+                    aHref.setAttributeNode(a_id)
+
+
+                    const a_data_id = document.createAttribute('data-id')
+                    a_data_id.value = `${element.id}`
+                    aHref.setAttributeNode(a_data_id)
+
+                    content.appendChild (aHref)
+
+                    const movie_name = document.createElement('div')
+                    movie_name.classList.add('movie_name')
+
+                    aHref.appendChild(movie_name)
+
+                    const h5 = document.createElement('h5')
+                    h5.classList.add('item')
+                    h5.innerHTML = `${element.name}`
+
+                    movie_name.appendChild(h5)
+
+                    const movie_img = document.createElement('div')
+                    movie_img.classList.add('movie_img')
+
+                    aHref.appendChild(movie_img)
+
+                    const img = document.createElement('img')
+                    const src = document.createAttribute('src')
+                    src.value = `img/${element.image}`
+                    img.setAttributeNode(src)
+
+                    movie_img.appendChild(img)
+
+                    const more = document.createElement('div')
+                    more.classList.add('more', 'text-right')
+
+                    aHref.appendChild(more)
+
+                    const p = document.createElement('p')
+                    p.innerText = 'სრულად'
+                    more.appendChild(p)
+
+                    view.appendChild(main_col)
+
+                })                
+                
+            }
+            // ----- end main_col structure ----
+
+            // ---- start pagination -----
+            function setupPagination(items, wrapper, row_per_page) {
+                wrapper.innerHTML = ""
+
+                const page_count = Math.ceil(items.length / row_per_page)
+                for(let i = 1; i < page_count + 1; i++) {
+                    const btn = paginationBtn(i, items)
+                    wrapper.appendChild(btn)
+                }
+            }
+
+            function paginationBtn(page, items){
+                const createBtn = document.createElement('li')
+                createBtn.classList.add('page-link', 'pointer')
+                createBtn.innerText = page
+
+
+                createBtn.addEventListener('click', (e) => {
+                    current_page = page
+                    display(items, view, rows, current_page)
+                })
+
+                return createBtn
+
+            }
+            // ---- end pagination -----
+
+            // ---- start call function ----- 
+
+            liveSearch()
+            pushInModal()
+            
+            display(movies, view, rows, current_page)
+            setupPagination(movies, pagination_element, rows)
+            
+            // ---- end call function ----- 
+
+            // ---- start modal ----
+            modal.forEach(element => {
+                document.querySelector('.modal_content').insertAdjacentHTML('afterbegin', element)
+            })
+
+
+            document.addEventListener('click', e => {
+                
+                document.querySelectorAll('.myModal').forEach(element => {
+                    
+                    const data_modal_id = element.getAttribute('data-id')
+
+                    if(e.target.id == data_modal_id) {
+                        
+                        document.getElementById(data_modal_id).style.visibility = "visible"
+                    }
+                })
+            })
+
+            const closeModal = document.querySelectorAll('.closeModal')
+                closeModal.forEach(e => {
+                    e.onclick = item => {
+                        const modalWindow = document.querySelectorAll('.myModal').forEach(e => {
+                            e.style.visibility = 'hidden'
+                        })
+                    }
+            })
+
+
+        </script>
+    </body>
+</html>

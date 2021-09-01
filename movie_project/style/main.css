@@ -1,0 +1,41 @@
+body {
+    font-family: roboto-geo-upper,sans-serif;
+}
+a {
+    color: #ffffff;
+}
+a:hover {
+    color: #ffffff;
+}
+img {
+    width: 240px;
+    height: 360px;
+}
+.col_row {
+    color: #ffffffa2;
+}
+.col_row .header {
+    color: #ffffff;
+}
+.hide {
+    display: none;
+}
+.pointer {
+    cursor: pointer;
+}
+.myModal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1050;
+    visibility: hidden;
+    overflow: hidden;
+    outline: 0;
+    background-color: rgba(128, 128, 128, 0.459);
+    
+}
+.movie_name, .movie_img, .more{
+    pointer-events: none;
+}
