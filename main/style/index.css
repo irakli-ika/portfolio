@@ -120,7 +120,7 @@ header nav .nav-items .nav-item a:hover {
 }
 
 .banner .container {
-  background-image: url("../img/emile-perron-xrVDYZRGdw4-unsplash.jpg");
+  background-image: url("img/emile-perron-xrVDYZRGdw4-unsplash.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -351,6 +351,18 @@ header nav .nav-items .nav-item a:hover {
 
 .projects .project-lists .proj_04 {
   background-image: url("../img/proj/mepdc.png");
+}
+
+.projects .project-lists .proj_05 {
+  background-image: url("../img/proj/rpc.PNG");
+}
+
+.projects .project-lists .proj_06 {
+  background-image: url("../img/proj/game.PNG");
+}
+
+.projects .project-lists .proj_07 {
+  background-image: url("../img/proj/move-proj.PNG");
 }
 
 .contact .contact-title {
