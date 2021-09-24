@@ -350,7 +350,7 @@ header nav .nav-items .nav-item a:hover {
 }
 
 .projects .project-lists .proj_04 {
-  background-image: url("../img/proj/mepdc.png");
+  background-image: url("../img/proj/mepdc.PNG");
 }
 
 .projects .project-lists .proj_05 {
@@ -363,6 +363,10 @@ header nav .nav-items .nav-item a:hover {
 
 .projects .project-lists .proj_07 {
   background-image: url("../img/proj/move-proj.PNG");
+}
+
+.projects .project-lists .proj_08 {
+  background-image: url("../img/proj/cost.PNG");
 }
 
 .contact .contact-title {
