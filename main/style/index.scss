@@ -114,7 +114,7 @@ header {
 // start banner
 .banner {
     .container {
-        background-image: url('img/emile-perron-xrVDYZRGdw4-unsplash.jpg');
+        background-image: url('../img/emile-perron-xrVDYZRGdw4-unsplash.jpg');
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
@@ -314,25 +314,25 @@ header {
             }
         }
         .proj_01 {
-            background-image: url('img/proj/innomerce.PNG');
+            background-image: url('../img/proj/innomerce.PNG');
         }
         .proj_02 {
-            background-image: url('img/proj/kanter.PNG');
+            background-image: url('../img/proj/kanter.PNG');
         }
         .proj_03 {
-            background-image: url('img/proj/auditors.PNG');
+            background-image: url('../img/proj/auditors.PNG');
         }
         .proj_04 {
-            background-image: url('img/proj/mepdc.png');
+            background-image: url('../img/proj/mepdc.png');
         }
         .proj_05 {
-            background-image: url("img/proj/rpc.PNG");
+            background-image: url("../img/proj/rpc.PNG");
           }
         .proj_06 {
-            background-image: url("img/proj/game.PNG");
+            background-image: url("../img/proj/game.PNG");
           }
         .proj_07 {
-            background-image: url("img/proj/move-proj.PNG");
+            background-image: url("../img/proj/move-proj.PNG");
           }
     }
 }

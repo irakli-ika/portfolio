@@ -1,0 +1,8 @@
+// mixin flexCenter {
+    @mixin dFlex($justifyContent, $aligneItems, $fd, $heigth ) {
+        display: flex;
+        flex-direction: $fd;
+        justify-content: $justifyContent;
+        align-items: $aligneItems;
+        height: $heigth;
+    }

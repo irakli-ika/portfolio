@@ -1,0 +1,175 @@
+header {
+    min-width: 1200px;
+
+    .header-top {
+        height: 100px;
+        width: 100%;
+
+        .container {
+            height: 100%;
+
+            > ul {
+                @include dFlex(space-between, center, row, 100%);
+
+                list-style-type: none;
+
+                .button a {
+                    padding: 10px 30px;
+                    border: 2px solid #0095D9;
+                    color: #2d3742;
+                    background-color: transparent;
+                    font-family: 'Oswald', sans-serif;
+                    font-weight: 500;
+                    text-decoration: none;
+                    letter-spacing: 0.2em;
+                    text-transform: uppercase;
+                    font-size: 15px;
+                    transition: background-color .5s;
+
+                    &:hover {
+                        color: #fff;
+                        background-color: #0095D9;
+                        border-color: #0095D9;
+                    }
+                }
+            }
+            
+            .header-contact {
+                @include dFlex(space-between, center, row, 100%);
+                list-style-type: none;
+                flex-basis: 550px;
+                color: #949494;
+
+                li {
+                    @include dFlex(space-between, center, row, 100%);
+                    position: relative;
+                    
+                    .icon {
+                        position: relative;
+                        margin-right: 20px;
+                        width: 3em;
+                        height: 3em;
+                        border: 1px solid #e8e9ee;
+                        border-radius: 50%;
+
+                        i {
+                            position: absolute;
+                            font-size: 20px;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%, -50%);
+                            color: #0095D9;
+                        }
+                    }
+                    span {
+                        display: block;
+                        line-height: 1.5;
+                    }
+                }
+            
+            }
+        }
+    }
+    .header-bottom {
+        background-color: #F5F6FA;
+        height: 65px;
+
+        .container {
+            height: 100%;
+
+            > ul {
+                @include dFlex(space-between, center, row, 100%);
+                list-style-type: none;
+                
+                .nav-content {
+                    flex-basis: 800px;
+                
+                    nav {
+                        > ul {
+                            @include dFlex(space-between, center, row, 100%);
+                            list-style-type: none;
+                            
+                        
+                            > li {
+                                position: relative;
+                                @include dFlex(space-between, center, row, 100%);
+                                text-transform: uppercase;
+                                color: #2d3742;
+                                letter-spacing: .08em;
+                                font: 400 14px/20px "Oswald", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+                                cursor: pointer;
+                                &:hover {
+                                    color: #0095D9;
+
+                                    > i {
+                                        color: #0095D9;
+                                        transform: rotateX(180deg);
+                                    }
+                                }
+                                > i {
+                                    color: #2d3742;
+                                    font-size: 10px;
+                                    cursor: pointer;
+                                    padding-left: 5px;
+                                    transition: transform .5s;
+                                }
+
+                                .sub-nav {
+                                    display: none;
+                                    position: absolute;
+                                    top: 45px;
+                                    left: 0;
+                                    z-index: 999;
+                                    background-color: #2d3742;
+                                    list-style-type: none;
+                                    padding: 0 20px;
+                                    min-width: 260px;
+                                    text-transform: capitalize;
+                                    
+                                    li {
+                                        padding: 20px 0;
+                                        transition: transform .5s;
+
+                                        a {
+                                            text-decoration: none;
+                                            padding: 20px 0; 
+                                            color: #aeb1be;
+                                            
+                                            i {
+                                                transform: translateX(-10px);
+                                                opacity: 0;
+                                                transition: transform .5s, opacity .5s;
+                                                font-size: 12px;
+                                            } 
+                                        }
+
+                                        &:hover {
+                                                transform: translateX(20px);
+
+                                                i {
+                                                    opacity: 1;
+                                                }
+                                            }
+                                    }
+                                }
+                            }
+                        }
+                        .active-nav {
+                            color: #0095D9;
+                        }
+                    }
+                }
+
+                .search-content {
+                    font-size: 20px;
+                    cursor: pointer;
+                    
+                    &:hover {
+                        color: #0095D9;
+                    }
+                }
+
+            }
+        }
+    }
+}
