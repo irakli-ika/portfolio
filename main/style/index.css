@@ -68,10 +68,10 @@ section {
 
 header {
   height: 50px;
+  background-color: #000;
 }
 
 header .container {
-  background-color: #000;
   height: 100%;
   padding: 0 50px;
   display: -webkit-box;
@@ -119,13 +119,17 @@ header nav .nav-items .nav-item a:hover {
   text-decoration: underline;
 }
 
-.banner .container {
+.banner {
   background-image: url("../img/emile-perron-xrVDYZRGdw4-unsplash.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   height: 90vh;
+}
+
+.banner .container {
   position: relative;
+  height: 100%;
 }
 
 .banner .container .content {

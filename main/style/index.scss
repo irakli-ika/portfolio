@@ -74,9 +74,9 @@ section {
 // start header
 header {
     height: 50px;
+    background-color: $black;
 
     .container {
-        background-color: $black;
         height: 100%;
         padding: 0 50px;
         display: flex;
@@ -113,13 +113,14 @@ header {
 }
 // start banner
 .banner {
+    background-image: url('../img/emile-perron-xrVDYZRGdw4-unsplash.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 90vh;
     .container {
-        background-image: url('../img/emile-perron-xrVDYZRGdw4-unsplash.jpg');
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        height: 90vh;
         position: relative;
+        height: 100%;
         
         .content {
             position: absolute;
